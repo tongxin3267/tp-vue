@@ -7,7 +7,7 @@
 框架版本为thinkphp5.1和vue@2.6.10
 php版本要求7.0+
 ## 快速开始
-```terminal
+```bash
 git clone git@github.com:yuchanns/tp-vue.git
 cd tp-vue
 composer install
@@ -18,7 +18,7 @@ php think run
 ## 使用方法
 ### 继承模板
 你的主页面需要使用继承的方式进行编写：
-```html
+```twig
 {% extends library('base/base') %}
 
 {% macro template() %}
@@ -45,7 +45,7 @@ php think run
 ```
 ### 编写组件
 使用twig模板引擎的宏功能编写你的组件：
-```html
+```twig
 {% macro template() %}
   <div>
     <!-- 此处编写你的组件html -->
@@ -70,7 +70,7 @@ php think run
 ```
 ### 调用组件
 使用twig模板引擎的import功能引入组件和组件样式：
-```html
+```twig
 {% extends library('base/base') %}
 
 {% macro template() %}
