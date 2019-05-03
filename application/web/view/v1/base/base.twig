@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico">
+  <title>{% block title %}首页{% endblock %} | ${config('app_name')}</title>
+  ${tinyj(block("style"))}
+</head>
+<body>
+<div id="app">
+  loading...
+</div>
+<script src="${static_url('js/polyfill.min.js')}"></script>
+<script src="${static_url('js/axios.min.js')}"></script>
+{% if config('app.app_debug') %}<script src="${static_url('js/vue.js')}"></script>{% else %}<script src="${static_url('js/vue.min.js')}"></script>{% endif %}
+${tinyj(block("default"))}
+<script>
+  App.name = 'App'
+  App.template = '<div id="app">' + App.template + '</div>'
+  new Vue({render: function (h) {return h(App)}}).$mount('#app')
+</script>
+</body>
+</html>

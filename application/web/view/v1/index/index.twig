@@ -1,0 +1,36 @@
+{% extends library('base/base') %}
+
+{% macro template() %}
+  <div>
+    <img alt="Vue logo" src="${static_url('images/logo.png')}">
+    <HelloWorld msg="Welcome to Your Vue.js App"></HelloWorld>
+  </div>
+{% endmacro %}
+
+{% block default %}
+  {% from library('index/components/HelloWorld') import default as HelloWorld %}
+  {% from _self import template %}
+  <script>
+    const App = {
+      components: {
+        HelloWorld: {${tinyj(HelloWorld())}}
+      },
+      template: '${tiny(template())}'
+    }
+  </script>
+{% endblock %}
+
+{% block style %}
+  {% from library('index/components/HelloWorld') import style as HelloWorld %}
+  ${HelloWorld()}
+  <style>
+    #app {
+      font-family: 'Avenir', Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-align: center;
+      color: #2c3e50;
+      margin-top: 60px;
+    }
+  </style>
+{% endblock %}
