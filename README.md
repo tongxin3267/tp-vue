@@ -1,11 +1,14 @@
 ![Thinkphp](https://box.kancloud.cn/5a0aaa69a5ff42657b5c4715f3d49221) 
 <img width="100" src="https://vuejs.org/images/logo.png" alt="Vue logo">
+<img width="100" src="https://twig.symfony.com/images/logo.png" alt="Twig logo">
 # tp-vue
 ## 介绍
 基于**php后端渲染**的thinkphp+vue框架。
 采用**twig**模板引擎渲染。
-框架版本为thinkphp5.1和vue@2.6.10
-php版本要求7.0+
+
+框架版本为thinkphp5.1和vue@2.6.10。
+
+php版本要求7.0+。
 ## 快速开始
 ```bash
 git clone git@github.com:yuchanns/tp-vue.git
@@ -112,6 +115,7 @@ php think run
 {% endblock %}
 ```
 *注意：引用组件需要在块或宏的作用域内进行才有效果！*
+
 支持组件嵌套引用组件。
 ### 模板函数
 * `${tiny()}`：压缩html和css代码
