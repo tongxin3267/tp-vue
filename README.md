@@ -1,5 +1,5 @@
-![](https://box.kancloud.cn/5a0aaa69a5ff42657b5c4715f3d49221) 
-![](https://camo.githubusercontent.com/728ce9f78c3139e76fa69925ad7cc502e32795d2/68747470733a2f2f7675656a732e6f72672f696d616765732f6c6f676f2e706e67) 
+![Thinkphp](https://box.kancloud.cn/5a0aaa69a5ff42657b5c4715f3d49221) 
+<img width="100" src="https://vuejs.org/images/logo.png" alt="Vue logo">
 # tp-vue
 ## 介绍
 基于**php后端渲染**的thinkphp+vue框架。
